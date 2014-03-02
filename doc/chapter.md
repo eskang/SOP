@@ -4,15 +4,13 @@ The same-origin policy (SOP) is a collection of mechanisms designed to restrict 
 
 However, the SOP is far from perfect. At times, it is too restrictive; there are legitimate cases in which two documents from different origins should be able to share a resource (e.g., mashups). At other times, it is not restrictive enough, with corner cases that can be exploited for common attacks such as cross-site request forgery (CSRF). Furthermore, the design of the SOP has evolved organically over the years and still puzzles many developers to this date.
 
-This chapter is slightly different from others in this book. Instead of building a working implementation of a browser with the same origin policy, our goal is to construct a concrete, executable _model_ that serves a simple yet precise documentation of the SOP. Like an implementation, the model can be executed to explore dynamic behaviors of the system; but unlike an implementation, the model omits low-level details that often get in the way of understanding the essential core of the SOP. 
+This chapter is somewhat different from others in this book. Instead of building a working implementation of a browser with the same origin policy, our goal is to construct a concrete, executable _model_ that serves a simple yet precise documentation of the SOP. Like an implementation, the model can be executed to explore dynamic behaviors of the system; but unlike an implementation, the model omits low-level details that often get in the way of understanding the essential core of the SOP. 
 
 To construct this model, we use _Alloy_, a language for modeling and analyzing software design. An Alloy model cannot be executed in the traditional sense of program execution. Instead, a model can be (1) _simulated_ to produce an _instance_, which represents a valid configuration or a trace, and (2) _checked_ to see whether the model satisfies a desired _property_.
 
-[Eunsuk: To add: What's the point of building a model when you can just build implementation?]
+[TODO: What's the point of building a model when you can just build implementation?]
 
 ## Model
-
-Alloy is cool. 
 
 We will start by building a small model of the web, along the way introducing features of Alloy and exploring different types of analyses that can be performed with it. We will then extend the model by adding the SOP and other mechanisms that have been invented to cope with the limtations of the SOP.
 
